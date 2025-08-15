@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="relative min-h-screen flex items-center bg-soft-gradient">
       <div className="container mx-auto px-4 py-16">
@@ -11,14 +14,14 @@ const Hero = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-2 text-primary">
                 <Star className="h-5 w-5 fill-current" />
-                <span className="text-sm font-medium">Premium Student Accommodation</span>
+                <span className="text-sm font-medium">Best Hostels in Ramanthapur Hyderabad</span>
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
-                Your <span className="text-primary">Home Away From Home</span> in Hyderabad
+                <span className="text-primary">Men's & Women's Hostel</span> in Ramanthapur Hyderabad
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Experience premium accommodation designed for working professionals and students. 
-                Clean, comfortable, and connected - where professionals meet and friendships flourish.
+                Find the best affordable hostel in Ramanthapur with food, WiFi, AC rooms & 24/7 water supply. 
+                Safe accommodation for students & working professionals near Osmania University, bus depot & metro station.
               </p>
             </div>
 
@@ -35,7 +38,7 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="text-lg px-8 py-6 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                onClick={() => document.getElementById('location')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/locations')}
               >
                 <MapPin className="h-5 w-5 mr-2" />
                 View Location
@@ -45,11 +48,11 @@ const Hero = () => {
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <div className="flex items-center space-x-1">
                 <MapPin className="h-4 w-4" />
-                <span>Pragathi Nagar, Hyderabad</span>
+                <span>Ramanthapur, Hyderabad - Near Osmania University</span>
               </div>
               <div className="flex items-center space-x-1">
                 <Star className="h-4 w-4 fill-primary text-primary" />
-                <span>Highly Rated</span>
+                <span>4.3★ Rated Hostel</span>
               </div>
             </div>
           </div>
