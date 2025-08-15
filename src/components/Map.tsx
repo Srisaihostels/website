@@ -31,7 +31,7 @@ const Map = () => {
 
       // Add marker for the hostel
       const marker = new mapboxgl.Marker({
-        color: '#2d7738', // Primary color from design system
+        color: 'hsl(0 25% 25%)', // Updated primary color from new design system
         scale: 1.2
       })
         .setLngLat(hostelLocation)
@@ -39,8 +39,8 @@ const Map = () => {
           new mapboxgl.Popup({ offset: 25 })
             .setHTML(`
               <div style="text-align: center; font-family: Inter, sans-serif;">
-                <h3 style="margin: 0 0 8px 0; color: #2d7738; font-weight: 600;">Sri Sai Womens Hostel</h3>
-                <p style="margin: 0; color: #666; font-size: 14px;">Pragathi Nagar, Ramanthapur<br>Hyderabad, Telangana</p>
+                <h3 style="margin: 0 0 8px 0; color: hsl(0 25% 25%); font-weight: 600;">Sri Sai Womens Hostel</h3>
+                <p style="margin: 0; color: hsl(0 25% 35%); font-size: 14px;">Pragathi Nagar, Ramanthapur<br>Hyderabad, Telangana</p>
               </div>
             `)
         )

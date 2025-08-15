@@ -28,19 +28,26 @@ const Header = () => {
             }}
             className="hover:opacity-80 transition-opacity"
           >
-            <h1 className="text-2xl font-bold text-primary">Sri Sai Hostels</h1>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/Logo.jpg" 
+                alt="SRI SAI HOSTELS Logo" 
+                className="h-12 w-auto"
+              />
+              <h1 className="text-2xl font-bold text-primary hidden sm:block">Sri Sai Hostels</h1>
+            </div>
           </button>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
           <button 
-            onClick={() => scrollToSection('amenities')}
+            onClick={() => navigate('/amenities')}
             className="text-foreground hover:text-primary transition-colors"
           >
             Amenities
           </button>
           <button 
-            onClick={() => scrollToSection('reviews')}
+            onClick={() => navigate('/reviews')}
             className="text-foreground hover:text-primary transition-colors"
           >
             Reviews
@@ -52,7 +59,7 @@ const Header = () => {
             Locations
           </button>
           <Button 
-            onClick={() => scrollToSection('contact')}
+            onClick={() => navigate('/contact')}
             className="bg-hero-gradient hover:opacity-90 transition-opacity"
           >
             Contact Us
@@ -82,13 +89,13 @@ const Header = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg">
             <div className="container mx-auto px-4 py-4 space-y-4">
               <button 
-                onClick={() => { scrollToSection('amenities'); setIsMobileMenuOpen(false); }}
+                onClick={() => { navigate('/amenities'); setIsMobileMenuOpen(false); }}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Amenities
               </button>
               <button 
-                onClick={() => { scrollToSection('reviews'); setIsMobileMenuOpen(false); }}
+                onClick={() => { navigate('/reviews'); setIsMobileMenuOpen(false); }}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
               >
                 Reviews
@@ -100,7 +107,7 @@ const Header = () => {
                 Locations
               </button>
               <Button 
-                onClick={() => { scrollToSection('contact'); setIsMobileMenuOpen(false); }}
+                onClick={() => { navigate('/contact'); setIsMobileMenuOpen(false); }}
                 className="w-full bg-hero-gradient hover:opacity-90 transition-opacity"
               >
                 Contact Us

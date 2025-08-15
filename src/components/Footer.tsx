@@ -9,7 +9,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Sri Sai Hostels</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/Logo.jpg" 
+                alt="SRI SAI HOSTELS Logo" 
+                className="h-10 w-auto"
+              />
+              <h3 className="text-2xl font-bold">Sri Sai Hostels</h3>
+            </div>
             <p className="text-primary-foreground/80 mb-4">
               Premium accommodation for working professionals and students in Hyderabad. 
               Where comfort meets community.
@@ -25,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
                 <button 
-                  onClick={() => document.getElementById('amenities')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => navigate('/amenities')}
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Amenities
@@ -33,7 +40,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => navigate('/reviews')}
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Reviews
@@ -49,7 +56,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => navigate('/contact')}
                   className="hover:text-primary-foreground transition-colors"
                 >
                   Contact
